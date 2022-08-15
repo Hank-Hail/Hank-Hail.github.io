@@ -6,7 +6,7 @@ form.addEventListener('submit', async event => {
     window.navigator.serviceWorker.register('./sw.js', {
         scope: __uv$config.prefix
     }).then(() => {
-        let url = input.value.trim();
+        let url = input.value;
         if (!isUrl(url)) url = 'https://duckduckgo.com/search?=' + url;
         else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
 
@@ -16,6 +16,6 @@ form.addEventListener('submit', async event => {
 });
 
 function isUrl(val = ''){
-    if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
+    if (/^(http(s)?:\/\/)?\S+\.\S{2,}$/i.test(val)) return true;
     return false;
 };
