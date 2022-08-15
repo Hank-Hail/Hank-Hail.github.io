@@ -8,7 +8,7 @@ form.addEventListener('submit', async event => {
     }).then(() => {
         let url = input.value;
         if (!isUrl(url)) url = `https://duckduckgo.com/${url}`;
-		else if (!(url.startsWith(/http(s)?:\/\//))) url = 'http://' + url;
+		else if (!((/^http(s)?:\/\//.test(url)))) url = 'http://' + url;
 
         window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
     });
