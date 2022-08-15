@@ -2,4 +2,4 @@
 
 Nathaniel B#0001 for free vbucks
 
-[Join for salvatore marchese pics : Code (PZaVnyfyCs)](https://discord.gg/PZaVnyfyCs)
+[Join for salvatore marchese feet pics : Code (PZaVnyfyCs)](https://discord.gg/PZaVnyfyCs)
