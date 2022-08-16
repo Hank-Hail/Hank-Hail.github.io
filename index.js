@@ -8,13 +8,13 @@ form.addEventListener('submit', async event => {
     }).then(() => {
         let url = input.value;
         if (!isUrl(url)) url = `https://duckduckgo.com/${url}`;
-		else if (!((/^http(s)?:\/\//.test(url)))) url = 'http://' + url;
+        else if (!((/^https?:\/\//.test(url)))) url = 'http://' + url;
 
         window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
     });
 });
 
 function isUrl(val = ''){
-    if (/^(http(s)?:\/\/)?\S+\.\S{2,}$/i.test(val)) return true;
+    if (/^(https?:\/\/)?[^\s\/:]+\.[^\s\d]{2,}$/i.test(val)) return true;
     return false;
 };
