@@ -15,6 +15,6 @@ form.addEventListener('submit', async e => {
 });
 
 function isUrl(val = ''){
-    if (/^(https?:\/\/)?[^\s\/:]+\.[^\s\d]{2,}$/i.test(val)) return true;
+    if (/^(https?:\/\/)?[^\s\/:]+\.[^\s]{2,}$/i.test(val)) return true;
     return false;
 };
